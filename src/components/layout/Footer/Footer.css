@@ -1,0 +1,334 @@
+.footer {
+  background: var(--bg-footer);
+  padding: var(--space-6) var(--space-4) var(--space-4);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--border-hover),
+    transparent
+  );
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 10% 90%,
+    var(--overlay-primary) 0%,
+    transparent 50%
+  );
+  z-index: 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+  position: relative;
+  z-index: 1;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+}
+
+.footer-logo a {
+  text-decoration: none;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: var(--transition-normal);
+  display: inline-block;
+  position: relative;
+  font-size: var(--font-xl);
+  font-weight: var(--fw-bold);
+}
+
+.footer-logo a:hover {
+  transform: translateY(-3px);
+  text-shadow: 0 0 15px var(--shadow-glow);
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-logo span {
+  display: inline-block;
+}
+
+.footer-logo a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 3px;
+  background: var(--primary-gradient);
+  border-radius: var(--radius-full);
+  transition: width 0.3s ease;
+}
+
+.footer-logo a:hover::after {
+  width: 70%;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-3);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: var(--card-border);
+  transition: var(--transition-normal);
+}
+
+.footer-links:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  font-size: var(--font-base);
+  transition: var(--transition-normal);
+  position: relative;
+  padding: var(--space-1) var(--space-2);
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-gradient);
+  transition: width 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.footer-links a:hover {
+  color: var(--text-primary);
+  transform: translateY(-3px);
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.footer-social {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: var(--font-lg);
+  transition: var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  border: var(--border-thin);
+}
+
+.footer-social a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--primary-gradient);
+  opacity: 0;
+  transition: var(--transition-normal);
+  z-index: -1;
+}
+
+.footer-social a:hover {
+  transform: translateY(-5px);
+  color: var(--text-primary);
+  border-color: transparent;
+}
+
+.footer-social a:hover::before {
+  opacity: 1;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: var(--space-4);
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  max-width: var(--content-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-bottom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--border-hover),
+    transparent
+  );
+}
+
+.footer-bottom p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-1);
+  transition: var(--transition-normal);
+}
+
+.footer-bottom p:hover {
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.footer-bottom .role {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: var(--font-base);
+  font-weight: var(--fw-semibold);
+  transition: var(--transition-normal);
+}
+
+.footer-bottom .role:hover {
+  filter: brightness(1.2);
+  text-shadow: 0 0 10px var(--shadow-glow);
+}
+
+.heart {
+  color: var(--accent-color);
+  display: inline-block;
+  animation: heartbeat 1.5s infinite;
+  margin-left: var(--space-1);
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.2);
+  }
+  30% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(1);
+  }
+}
+
+/* Media Queries - Mobile First */
+@media screen and (max-width: 480px) {
+  .footer-logo a {
+    font-size: var(--font-base);
+  }
+
+  .footer-links a {
+    font-size: var(--font-xs);
+  }
+
+  .footer-bottom {
+    font-size: var(--font-xs);
+  }
+
+  .footer-bottom .role {
+    font-size: var(--font-xs);
+  }
+
+  .footer-social a {
+    width: 35px;
+    height: 35px;
+    font-size: var(--font-base);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-logo a {
+    font-size: var(--font-lg);
+  }
+
+  .footer-links a {
+    font-size: var(--font-sm);
+  }
+
+  .footer-bottom {
+    font-size: var(--font-xs);
+  }
+
+  .footer-bottom .role {
+    font-size: var(--font-sm);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 var(--space-4);
+  }
+
+  .footer-links {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding-top: var(--space-8);
+  }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 var(--space-5);
+  }
+
+  .footer-links {
+    padding: var(--space-3) var(--space-5);
+  }
+}
