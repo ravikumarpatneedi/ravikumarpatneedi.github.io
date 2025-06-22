@@ -14,9 +14,9 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import emailjs from "@emailjs/browser";
 
 // Replace these with your EmailJS credentials
-const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-const EMAILJS_TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-const EMAILJS_PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+const EMAILJS_SERVICE_ID = "service_m0dtqhc";
+const EMAILJS_TEMPLATE_ID = "template_kq5jm4n";
+const EMAILJS_PUBLIC_KEY = "59MuVqALoc8Y3hvw5";
 
 // Initialize EmailJS
 emailjs.init(EMAILJS_PUBLIC_KEY);
