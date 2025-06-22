@@ -105,5 +105,3 @@ The color scheme and other design variables can be modified in the CSS files usi
 - Code splitting for better load times
 - Optimized animations for performance
 - Responsive images for different device sizes
-# ravipatneedi
-# ravikravikumarpatneedi.github.io
