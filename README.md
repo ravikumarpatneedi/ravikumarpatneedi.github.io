@@ -104,4 +104,4 @@ The color scheme and other design variables can be modified in the CSS files usi
 - Lazy loading of images
 - Code splitting for better load times
 - Optimized animations for performance
-- Responsive images for different device sizes
+- Responsive images for different device sizes 
