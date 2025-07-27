@@ -51,7 +51,7 @@ const Experience = () => {
       ]
     },
     {
-      company: "Woosu Automotive Inidia Pvt Ltd",
+      company: "Woosu Automotive India Pvt Ltd",
       position: "Graduate Engineer Trainee",
       period: "Nov 2020 - Nov 2021",
       location: "Chennai, India",
